@@ -1,23 +1,20 @@
 
 # Data Visualization
 
-## SWBAT:
-* Understand matplotlib plot structure for drawing basic plots.
-* Visualize data using scatterplots, barplots and histograms
-
-
 ## Introduction
 
-This lesson covers the basics of data visualization using Python and `matplotlib` plotting library. We shall look into the components of standard `matplotlib` plots and using them for creating and customizing visualizations. Such visualization skills are considered to be of high importance in the domains of data visualization and visual analytics. 
+This lesson introduces data visualization using Python and the popular `matplotlib` plotting library. We shall look into the elements of standard `matplotlib` plots and how to use them for creating and customizing visualizations. 
 
-The main objective of this lesson is for you to have a gentle introduction to `matplotlib` plotting library, and how to use it for plotting some basic plots on simple data  generated using numpy methods. 
+## Objectives
+You will be able to:
+* Understand the Matplotlib plot structure for drawing basic plots.
+* Visualize data using scatterplots, barplots and histograms
 
-
-## `matplotlib` :
+## `matplotlib`
 
 The `matplotlib` plotting library provides a range of built in functions to start visualizing data with minimum effort. 
 
-Let's first import matplotlib's `pyplot` module into our working environment along with `numpy` to create sample data. We shall import the `pyplot` module from `matplotlib` as it provides simple and agile creation of desired plots. 
+Let's first import matplotlib's `pyplot` module (a module is a unit of prewritten code that we can use in our projects) into our working environment along with `numpy` (one of the most popular libraries in Python for scientific computing) to create our sample data. We shall import the `pyplot` module from `matplotlib` as it provides simple and agile creation of desired plots. 
 
 Following import statement must be provided before using `matplotlib.pyplot`.
 
@@ -70,7 +67,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_8_0.png)
+![png](index_files/index_9_0.png)
 
 
 So above shows the harmonic relationship between variables i.e. the sine wave. We can customize the plot further to make it easier to read as below:
@@ -94,7 +91,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_10_0.png)
+![png](index_files/index_11_0.png)
 
 
 Remember, labeling and other customizations that you see here are applicable to almost all kinds of plots in matplotlib as we shall see ahead. 
@@ -139,7 +136,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_16_0.png)
+![png](index_files/index_17_0.png)
 
 
 With such a bar graph, we can easily inspect the quantities in each category (0-10) and make informed decisions about data distribution in these categories. 
@@ -176,7 +173,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_19_0.png)
+![png](index_files/index_20_0.png)
 
 
 Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, hence last tallest bar on 0. 
@@ -194,7 +191,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_22_0.png)
+![png](index_files/index_23_0.png)
 
 
 The granularity of bins can be changed according to the analytical needs and amount of underlying data. So if we generate a lot of numbers, and use lots of bins, it starts to look like a more "bell-shaped" normal distribution, as shown below:
@@ -217,7 +214,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_24_0.png)
+![png](index_files/index_25_0.png)
 
 
 Looks more like the usual "bell curve". Try increasing the number of values and bins further, and inspect the effect of output shape. 
