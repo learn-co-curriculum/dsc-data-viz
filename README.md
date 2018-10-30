@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This lesson introduces data visualization using Python and the popular `matplotlib` plotting library. We shall look into the elements of standard `matplotlib` plots and how to use them for creating and customizing visualizations. 
+This lesson introduces data visualization using Python and the popular Matplotlib plotting library. We shall look into the elements of standard Matplotlib plots and how to use them for creating and customizing visualizations. 
 
 ## Objectives
 You will be able to:
