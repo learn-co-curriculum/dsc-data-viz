@@ -10,9 +10,9 @@ You will be able to:
 * Understand the Matplotlib plot structure for drawing basic plots.
 * Visualize data using scatterplots, barplots and histograms
 
-## `matplotlib`
+## Matplotlib Plotting Library
 
-The `matplotlib` plotting library provides a range of built in functions to start visualizing data with minimum effort. 
+The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimum effort. 
 
 Let's first import matplotlib's `pyplot` module (a module is a unit of prewritten code that we can use in our projects) into our working environment along with `numpy` (one of the most popular libraries in Python for scientific computing) to create our sample data. We shall import the `pyplot` module from `matplotlib` as it provides simple and agile creation of desired plots. 
 
