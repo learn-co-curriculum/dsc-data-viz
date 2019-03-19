@@ -26,7 +26,6 @@ import matplotlib.pyplot as plt
 In jupyter notebooks, you can use `%matplotlib` magic with `inline` to show plots inside the notebook or `qt` for external/interactive plots. `inline` is recommended for most requirements (external plots are suitable for interactive visualizations).  
 
 
-
 ```python
 # Import matplotlib
 import matplotlib.pyplot as plt
@@ -35,7 +34,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 ```
 
-### Scatter plot
+## Scatter plot
 
 A scatter plot is a two-dimensional data visualization that uses dots to represent the values obtained for two different variables - one plotted along the x-axis and the other plotted along the y-axis. 
 
@@ -67,7 +66,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_9_0.png)
+![png](index_files/index_5_0.png)
 
 
 So above shows the harmonic relationship between variables i.e. the sine wave. We can customize the plot further to make it easier to read as below:
@@ -91,7 +90,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_11_0.png)
+![png](index_files/index_7_0.png)
 
 
 Remember, labeling and other customizations that you see here are applicable to almost all kinds of plots in matplotlib as we shall see ahead. 
@@ -99,7 +98,7 @@ Remember, labeling and other customizations that you see here are applicable to 
 ### Bar Graph or Column Graph.
 
 Bar charts are one of the most common plot types for showing comparisons between data elements. A bar chart or column graph allows comparisons across categories by presenting categorical data as rectangular bars with heights or lengths proportional to the values that they represent. One axis of the chart shows the specific categories being compared and the other axis represents a discrete value scale. The bars can be plotted vertically or horizontally.
-![](bar2.png)
+![](images/bar2.png)
 
 Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. 
 
@@ -136,22 +135,22 @@ plt.show()
 ```
 
 
-![png](index_files/index_17_0.png)
+![png](index_files/index_11_0.png)
 
 
 With such a bar graph, we can easily inspect the quantities in each category (0-10) and make informed decisions about data distribution in these categories. 
 
-###  Histograms 
+##  Histograms 
 
 A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram, and the raw data it was constructed from, is shown below:
 
-![](hist.png)
+![](images/hist.png)
 
 Basically, histograms are used to represent data given in form of some groups. X-axis is about bin ranges where Y-axis talks about frequency. So, if you want to represent age wise population in form of graph then histogram suits well as it tells you how many exists in certain group range or bin, if you talk in context of histograms.
 
 Bars Charts are distinguished from Histograms, as they do not display continuous developments over an interval. Bar Chart's discrete data is categorical data and therefore answers the question of "how many?" in each category.
 
-![](bars1.svg)
+![](images/bars1.svg)
 
 In matplotlib, we can use `plt.hist()` function to draw a histogram while passing in values from the required data variable. First, we shall use the `np.random.randn()` function to generate 200 numbers with a 0 mean normal distribution.
 
@@ -173,12 +172,12 @@ plt.show()
 ```
 
 
-![png](index_files/index_20_0.png)
+![png](index_files/index_14_0.png)
 
 
 Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, hence last tallest bar on 0. 
 
-#### The `bins` argument
+### The `bins` argument
 we can optionally pass the `bins` argument to describe the width the slot or range, in our case it is 10 that is, whatever values will be generated,  will be divider by bin value and get plotted. Let's say we change it to 5 below.
 
 
@@ -191,7 +190,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_23_0.png)
+![png](index_files/index_16_0.png)
 
 
 The granularity of bins can be changed according to the analytical needs and amount of underlying data. So if we generate a lot of numbers, and use lots of bins, it starts to look like a more "bell-shaped" normal distribution, as shown below:
@@ -214,7 +213,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_25_0.png)
+![png](index_files/index_18_0.png)
 
 
 Looks more like the usual "bell curve". Try increasing the number of values and bins further, and inspect the effect of output shape. 
