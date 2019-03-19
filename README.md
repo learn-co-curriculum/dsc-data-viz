@@ -175,10 +175,10 @@ plt.show()
 ![png](index_files/index_14_0.png)
 
 
-Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, hence last tallest bar on 0. 
+Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, so the tallest bar appears to be around 0. 
 
 ### The `bins` argument
-we can optionally pass the `bins` argument to describe the width the slot or range, in our case it is 10 that is, whatever values will be generated,  will be divider by bin value and get plotted. Let's say we change it to 5 below.
+we can optionally pass the `bins` argument to describe the width the slot or range, in our case it is 10 that is, whatever values will be generated,  will be divided by bin value and get plotted. Let's say we change it to 5 below.
 
 
 ```python
