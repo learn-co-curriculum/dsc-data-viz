@@ -98,7 +98,9 @@ Remember, labeling and other customizations that you see here are applicable to 
 ### Bar Graph or Column Graph.
 
 Bar charts are one of the most common plot types for showing comparisons between data elements. A bar chart or column graph allows comparisons across categories by presenting categorical data as rectangular bars with heights or lengths proportional to the values that they represent. One axis of the chart shows the specific categories being compared and the other axis represents a discrete value scale. The bars can be plotted vertically or horizontally.
-![](images/bar2.png)
+
+<img src="images/image_bar.png" width="700">
+
 
 Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. 
 
@@ -144,13 +146,17 @@ With such a bar graph, we can easily inspect the quantities in each category (0-
 
 A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram, and the raw data it was constructed from, is shown below:
 
-![](images/hist.png)
+
+<img src="images/image_histogram.png" width="300">
+
 
 Basically, histograms are used to represent data given in form of some groups. X-axis is about bin ranges where Y-axis talks about frequency. So, if you want to represent age wise population in form of graph then histogram suits well as it tells you how many exists in certain group range or bin, if you talk in context of histograms.
 
 Bars Charts are distinguished from Histograms, as they do not display continuous developments over an interval. Bar Chart's discrete data is categorical data and therefore answers the question of "how many?" in each category.
 
-![](images/bars1.svg)
+<br>
+<img src="images/image_bar_hist.png" width="700">
+<br>
 
 In matplotlib, we can use `plt.hist()` function to draw a histogram while passing in values from the required data variable. First, we shall use the `np.random.randn()` function to generate 200 numbers with a 0 mean normal distribution.
 
