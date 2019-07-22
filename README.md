@@ -41,7 +41,7 @@ A scatter plot is a two-dimensional data visualization that uses dots to represe
 Scatter plots are used when you want to show the relationship between two variables. Scatter plots are sometimes called correlation plots because they show how two variables are correlated. 
 
 
-Let's use python's `numpy` library to create sample data (numpy will be covered in detail in unit 3). We shall use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
+Let's use python's `numpy` library to create sample data. We shall use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
 
 
 ```python
@@ -50,7 +50,7 @@ import numpy as np
 
 # Generate an array x of 30 equally spaced data points on a line space of 0 - 10.
 x = np.linspace(0, 10, 30)
-# Calcuate sin(x) and dave in a new array y
+# Calcuate sin(x) and save in a new array y
 y = np.sin(x)
 ```
 
@@ -165,10 +165,10 @@ In matplotlib, we can use `plt.hist()` function to draw a histogram while passin
 # Set seed for reproducability
 np.random.seed(100)
 
-# Generate 100 values from 0 mean normal distribution
+# Generate 200 values from 0 mean normal distribution
 x = np.random.randn(200)
 
-#Plot the distogram with hist() function
+#Plot the histogram with hist() function
 plt.hist(x, bins = 10)
 
 plt.xlabel('Normal random distribution')
@@ -206,7 +206,7 @@ The granularity of bins can be changed according to the analytical needs and amo
 # Set seed for reproducability
 np.random.seed(100)
 
-# Generate 100 values from 0 mean normal distribution
+# Generate 10000 values from 0 mean normal distribution
 x = np.random.randn(10000)
 
 #Plot the distogram with hist() function
