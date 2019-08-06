@@ -12,9 +12,9 @@ You will be able to:
 
 ## Matplotlib Plotting Library
 
-The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimum effort. 
+The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimal effort. 
 
-First, import matplotlib's `pyplot` module (a module is a unit of prewritten code that you can use in your projects) into your working environment along with `numpy` (one of the most popular libraries in Python for scientific computing) to create some sample data. You will see that importing the `pyplot` module from `matplotlib` provides simple and agile creation of desired plots. 
+First, import matplotlib's `pyplot` module (a module is a unit of prewritten code that you can use in your projects) into your working environment along with `numpy` (one of the most popular Python libraries for scientific computing) to create some sample data. You will see that importing the `pyplot` module from `matplotlib` provides simple and agile creation of desired plots. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -38,7 +38,7 @@ A scatter plot is a two-dimensional data visualization that uses dots to represe
 
 Scatter plots are used when you want to show the relationship between two variables. Scatter plots are sometimes called correlation plots because they show how two variables are correlated. 
 
-For this example, you will use python's `numpy` library to create sample data. Numpy is a specialized package for scientific computing. It is primarily used for performing numerical operations. Don't worry about all of the details surround numpy right now, it will be introduced formally later. For now, use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations. The industry standard is to alias numpy as np.
+For this example, you will use python's `numpy` library to create sample data. Since numpy is a specialized package for scientific computing, it is primarily used for performing numerical operations. Don't worry about all of the details surrounding numpy right now, it will be introduced formally later. For now, use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations. The industry standard is to alias numpy as np.
 
 
 ```python
@@ -141,7 +141,7 @@ Thar bar graph above is useful because you can easily inspect the quantities in 
 
 ##  Histograms 
 
-A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram, and the raw data it was constructed from, is shown below:
+A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram is shown below:
 
 
 <img src="images/image_histogram.png" width="300">
@@ -178,14 +178,14 @@ plt.show()
 ![png](index_files/index_14_0.png)
 
 
-Recall, the Y-axis tells you the frequency a certain range of numbers appears in data set. Since this data was normally distributed, the probability of appearing increases as you move towards the mean, so it makes sense that the tallest bar is around 0.
+Recall, the Y-axis tells you the frequency a certain range of numbers appears in data set. Since this data are normally distributed, the probability of appearing increases as you move towards the mean, so it makes sense that the tallest bar is around 0.
 
 ### The `bins` argument
-Say you want to change the range of values that define the groups of a histogram. You can optionally pass the `bins` argument to set the number of groups. In the plot above, the data have been separated into 10 groups. Let's you want to change that number to 5:
+Say you want to change the range of values that define the groups of a histogram. You can optionally pass the `bins` argument to set the number of groups. In the plot above, the data have been separated into 10 groups. Check out what happens when you change the number of bins to 5:
 
 
 ```python
-plt.hist(x, bins = 5, edgecolor='black')
+plt.hist(x, bins=5, edgecolor='black')
 plt.xlabel('Normal Distribution')
 plt.ylabel('Frequency of values')
 plt.title('Histograms in matplotlib')
@@ -198,7 +198,7 @@ plt.show()
 
 Note the scale of the Y-axis and the width of the bars compared to the histogram using 10 bins. The granularity of the bins can be changed according to your specific analytical needs and the amount of underlying data. For example, if you had 5 data points, you probably would not want to use 50 bins.  
 
-For the next example, generate a lot of numbers and use a lot of bins. Note how the histogram starts to look more "bell-shaped" which is characteristic of the normal distribution:
+For the next example, generate a lot of numbers and use a lot of bins. Take note of how the histogram starts to look more "bell-shaped" which is characteristic of the normal distribution:
 
 
 ```python
@@ -209,7 +209,7 @@ np.random.seed(100)
 x = np.random.randn(10000)
 
 #Plot the distogram with hist() function
-plt.hist(x, bins = 50, edgecolor="black")
+plt.hist(x, bins=50, edgecolor="black")
 
 plt.xlabel('Normal random distribution')
 plt.ylabel('Frequency of Values')
@@ -221,8 +221,8 @@ plt.show()
 ![png](index_files/index_18_0.png)
 
 
-Looks more like the usual "bell curve". Try increasing the number of values and bins further and inspect how this changes the shape of the distribution.
+Definitely looks more like the usual "bell curve"! Try increasing the number of values and bins further and inspect how this changes the shape of the distribution.
 
 ## Summary
 
-In this lesson, we learned how to use matplotlib's basic plotting techniques to visually describe our data. We also identified use cases for each of these techniques and learned how to customize and add basic details to a plot. 
+In this lesson, you learned how to use matplotlib's basic plotting techniques to visually describe your data. You also identified use cases for each of these techniques and learned how to customize and add basic details to a plot. 
