@@ -41,7 +41,7 @@ A scatter plot is a two-dimensional data visualization that uses dots to represe
 Scatter plots are used when you want to show the relationship between two variables. Scatter plots are sometimes called correlation plots because they show how two variables are correlated. 
 
 
-Let's use python's `numpy` library to create sample data. We shall use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
+Let's use python's `numpy` library to create sample data. Numpy is a specialized package for scientific computing. It is primarily used for performing numerical operations. Don't worry about all of the details surround numpy right now, it will be introduced formally later. For now, we shall use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations. The industry standard is to alias numpy as np.
 
 
 ```python
@@ -102,7 +102,7 @@ Bar charts are one of the most common plot types for showing comparisons between
 <img src="images/image_bar.png" width="700">
 
 
-Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. 
+Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. To do this, some functions from the ```np.random``` library will be used. This is a specialized library for generating random numbers. Don't worry if the code seems unfamiliar now, the details of using numpy for generating random numbers will be covered in detail later.
 
 
 ```python
@@ -158,7 +158,7 @@ Bars Charts are distinguished from Histograms, as they do not display continuous
 <img src="images/image_bar_hist.png" width="700">
 <br>
 
-In matplotlib, we can use `plt.hist()` function to draw a histogram while passing in values from the required data variable. First, we shall use the `np.random.randn()` function to generate 200 numbers with a 0 mean normal distribution.
+In matplotlib, we can use `plt.hist()` function to draw a histogram while passing in values from the required data variable. First, we shall use the `np.random.randn()` function again to generate 200 numbers with a 0 mean normal distribution.
 
 
 ```python
@@ -181,7 +181,7 @@ plt.show()
 ![png](index_files/index_14_0.png)
 
 
-Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, so the tallest bar appears to be around 0. 
+Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing increases as we move towards the 0 mean, so the tallest bar appears to be around 0. 
 
 ### The `bins` argument
 we can optionally pass the `bins` argument to describe the width the slot or range, in our case it is 10 that is, whatever values will be generated,  will be divided by bin value and get plotted. Let's say we change it to 5 below.
@@ -226,4 +226,4 @@ Looks more like the usual "bell curve". Try increasing the number of values and 
 
 ## Summary
 
-In this lesson, we learnt how to use matplotlib's basic plotting techniques to visually describe our data. We also identified use cases for each of these techniques and learnt how to customize and add basic details to a plot. 
+In this lesson, we learned how to use matplotlib's basic plotting techniques to visually describe our data. We also identified use cases for each of these techniques and learned how to customize and add basic details to a plot. 
