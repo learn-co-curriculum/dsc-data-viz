@@ -137,7 +137,7 @@ plt.show()
 ![png](index_files/index_11_0.png)
 
 
-Thar bar graph above is useful because you can easily inspect the quantities in each category (0-10) and make informed decisions about how data are distributed across these categories. 
+That bar graph above is useful because you can easily inspect the quantities in each category (0-10) and make informed decisions about how data are distributed across these categories. 
 
 ##  Histograms 
 
