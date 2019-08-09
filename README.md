@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This lesson introduces data visualization using Python and the popular Matplotlib plotting library. We shall look into the elements of standard Matplotlib plots and how to use them for creating and customizing visualizations. 
+This lesson introduces data visualization using Python and the popular Matplotlib plotting library. You will look into the elements of standard Matplotlib plots and how to use them for creating and customizing visualizations. 
 
 ## Objectives
 You will be able to:
@@ -12,18 +12,16 @@ You will be able to:
 
 ## Matplotlib Plotting Library
 
-The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimum effort. 
+The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimal effort. 
 
-Let's first import matplotlib's `pyplot` module (a module is a unit of prewritten code that we can use in our projects) into our working environment along with `numpy` (one of the most popular libraries in Python for scientific computing) to create our sample data. We shall import the `pyplot` module from `matplotlib` as it provides simple and agile creation of desired plots. 
-
-Following import statement must be provided before using `matplotlib.pyplot`.
+First, import matplotlib's `pyplot` module (a module is a unit of prewritten code that you can use in your projects) into your working environment along with `numpy` (one of the most popular Python libraries for scientific computing) to create some sample data. You will see that importing the `pyplot` module from `matplotlib` provides simple and agile creation of desired plots. 
 
 ```python
 import matplotlib.pyplot as plt
 
 ```
 
-In jupyter notebooks, you can use `%matplotlib` magic with `inline` to show plots inside the notebook or `qt` for external/interactive plots. `inline` is recommended for most requirements (external plots are suitable for interactive visualizations).  
+In jupyter notebooks, you can use the `%matplotlib` "magic command" with `inline` to show plots inside the notebook or `qt` for external/interactive plots. `inline` is recommended for most requirements (external plots are suitable for interactive visualizations).  
 
 
 ```python
@@ -40,8 +38,7 @@ A scatter plot is a two-dimensional data visualization that uses dots to represe
 
 Scatter plots are used when you want to show the relationship between two variables. Scatter plots are sometimes called correlation plots because they show how two variables are correlated. 
 
-
-Let's use python's `numpy` library to create sample data. We shall use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
+For this example, you will use python's `numpy` library to create sample data. Since numpy is a specialized package for scientific computing, it is primarily used for performing numerical operations. Don't worry about all of the details surrounding numpy right now, it will be introduced formally later. For now, use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations. The industry standard is to alias numpy as np.
 
 
 ```python
@@ -54,7 +51,7 @@ x = np.linspace(0, 10, 30)
 y = np.sin(x)
 ```
 
-Now that we have our data ready, We shall create a scatter plot using `plt.scatter()` function which can take in two vectors and shows their relationship. We can optionally pass in extra parameters like `label` to provide information to the plot, `plt.title()` for defining a title and `plt.legend()` to add this context information to the plot. Finally we shall use `plt.show()` functions to output the plot.
+Now that you have your data ready, create a scatter plot using the `plt.scatter()` function which takes in two vectors and shows their relationship. You can optionally pass in extra parameters like `label` to provide information to the plot, `plt.title()` for defining a title, and `plt.legend()` to add the label information to the plot. Finally, use the `plt.show()` function to display the plot.
 
 
 ```python
@@ -69,9 +66,9 @@ plt.show()
 ![png](index_files/index_5_0.png)
 
 
-So above shows the harmonic relationship between variables i.e. the sine wave. We can customize the plot further to make it easier to read as below:
+In case you are wondering, the above plot shows a harmonic relationship between two variables i.e. the sine wave. You can customize the plot further to make it easier to read.
 
-Let's provide labels for both axes in the above chart by using `plt.xlabel` and `plt.ylabel`. We can also change the size of the plot with `plt.figure(figsize=(a,b))`, where a and b are inches for width and height of the plot. Let's see this in action below:
+First, provide some labels for both axes by using `plt.xlabel` and `plt.ylabel`. You can also change the size of the plot with `plt.figure(figsize=(a,b))`, where a and b are inches for width and height of the plot. Let's see this in action below.
 
 
 ```python
@@ -93,7 +90,7 @@ plt.show()
 ![png](index_files/index_7_0.png)
 
 
-Remember, labeling and other customizations that you see here are applicable to almost all kinds of plots in matplotlib as we shall see ahead. 
+The nice thing is labeling and other customizations that you see here are applicable to almost all kinds of plots in matplotlib. 
 
 ### Bar Graph or Column Graph.
 
@@ -102,7 +99,7 @@ Bar charts are one of the most common plot types for showing comparisons between
 <img src="images/image_bar.png" width="700">
 
 
-Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. 
+Matplotlib comes packaged with a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. Let's plot a simple vertical bar graph with `.bar()` function. In the above example, we had the same number of values in both x and y. Let's generate some more data in numpy for plotting first. To do this, some functions from the ```np.random``` library will be used. This is a specialized library for generating random numbers. Don't worry if the code seems unfamiliar now, the details of using numpy for generating random numbers will be covered in detail later.
 
 
 ```python
@@ -117,7 +114,7 @@ x = np.arange(10)
 y = np.random.randn(10)
 ```
 
-Now let's plot a bar graph based on above data.
+Now plot a bar graph based on above data.
 
 
 ```python
@@ -140,25 +137,25 @@ plt.show()
 ![png](index_files/index_11_0.png)
 
 
-With such a bar graph, we can easily inspect the quantities in each category (0-10) and make informed decisions about data distribution in these categories. 
+Thar bar graph above is useful because you can easily inspect the quantities in each category (0-10) and make informed decisions about how data are distributed across these categories. 
 
 ##  Histograms 
 
-A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram, and the raw data it was constructed from, is shown below:
+A histogram is a plot that lets you discover the underlying frequency distribution of a set of continuous data. This allows the inspection of the data for its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram is shown below:
 
 
 <img src="images/image_histogram.png" width="300">
 
 
-Basically, histograms are used to represent data given in form of some groups. X-axis is about bin ranges where Y-axis talks about frequency. So, if you want to represent age wise population in form of graph then histogram suits well as it tells you how many exists in certain group range or bin, if you talk in context of histograms.
+Basically, histograms are used to represent data that has been split into some number groups. The X-axis describes the groups and the Y-axis describes the frequency of occurrence. If this is a little confusing, consider the histogram of ages above. The X-axis shows ages in groups of 10 years. The Y-axis is a count of how many times a member from each group appears in the data. For example, there are 2 occurrences of ages between 20-30.
 
-Bars Charts are distinguished from Histograms, as they do not display continuous developments over an interval. Bar Chart's discrete data is categorical data and therefore answers the question of "how many?" in each category.
+It is important to distinguish bar charts from histograms. Bar charts show category-specific values. Histograms show counts of how frequently a given range of values occurs in a data set. 
 
 <br>
 <img src="images/image_bar_hist.png" width="700">
 <br>
 
-In matplotlib, we can use `plt.hist()` function to draw a histogram while passing in values from the required data variable. First, we shall use the `np.random.randn()` function to generate 200 numbers with a 0 mean normal distribution.
+You can use the `plt.hist()` function in matplotlib to draw a histogram while passing in values from the required data variable. First, use the `np.random.randn()` function again to generate 200 numbers that are normally distributed around a mean of 0. Don't worry if you didn't catch that last sentence, distributions and means will be covered in detail later.
 
 
 ```python
@@ -169,7 +166,7 @@ np.random.seed(100)
 x = np.random.randn(200)
 
 #Plot the histogram with hist() function
-plt.hist(x, bins = 10)
+plt.hist(x, bins = 10, edgecolor='black')
 
 plt.xlabel('Normal random distribution')
 plt.ylabel('Frequency of Values')
@@ -181,14 +178,14 @@ plt.show()
 ![png](index_files/index_14_0.png)
 
 
-Y-axis tells about the frequency a certain number appears in data set. Since this data was normally distributed, the probability of appearing a number increases as we move towards the 0 mean, so the tallest bar appears to be around 0. 
+Recall, the Y-axis tells you the frequency a certain range of numbers appears in data set. Since this data are normally distributed, the probability of appearing increases as you move towards the mean, so it makes sense that the tallest bar is around 0.
 
 ### The `bins` argument
-we can optionally pass the `bins` argument to describe the width the slot or range, in our case it is 10 that is, whatever values will be generated,  will be divided by bin value and get plotted. Let's say we change it to 5 below.
+Say you want to change the range of values that define the groups of a histogram. You can optionally pass the `bins` argument to set the number of groups. In the plot above, the data have been separated into 10 groups. Check out what happens when you change the number of bins to 5:
 
 
 ```python
-plt.hist(x, bins = 5)
+plt.hist(x, bins=5, edgecolor='black')
 plt.xlabel('Normal Distribution')
 plt.ylabel('Frequency of values')
 plt.title('Histograms in matplotlib')
@@ -199,7 +196,9 @@ plt.show()
 ![png](index_files/index_16_0.png)
 
 
-The granularity of bins can be changed according to the analytical needs and amount of underlying data. So if we generate a lot of numbers, and use lots of bins, it starts to look like a more "bell-shaped" normal distribution, as shown below:
+Note the scale of the Y-axis and the width of the bars compared to the histogram using 10 bins. The granularity of the bins can be changed according to your specific analytical needs and the amount of underlying data. For example, if you had 5 data points, you probably would not want to use 50 bins.  
+
+For the next example, generate a lot of numbers and use a lot of bins. Take note of how the histogram starts to look more "bell-shaped" which is characteristic of the normal distribution:
 
 
 ```python
@@ -210,7 +209,7 @@ np.random.seed(100)
 x = np.random.randn(10000)
 
 #Plot the distogram with hist() function
-plt.hist(x, bins = 50)
+plt.hist(x, bins=50, edgecolor="black")
 
 plt.xlabel('Normal random distribution')
 plt.ylabel('Frequency of Values')
@@ -222,8 +221,8 @@ plt.show()
 ![png](index_files/index_18_0.png)
 
 
-Looks more like the usual "bell curve". Try increasing the number of values and bins further, and inspect the effect of output shape. 
+Definitely looks more like the usual "bell curve"! Try increasing the number of values and bins further and inspect how this changes the shape of the distribution.
 
 ## Summary
 
-In this lesson, we learnt how to use matplotlib's basic plotting techniques to visually describe our data. We also identified use cases for each of these techniques and learnt how to customize and add basic details to a plot. 
+In this lesson, you learned how to use matplotlib's basic plotting techniques to visually describe your data. You also identified use cases for each of these techniques and learned how to customize and add basic details to a plot. 
