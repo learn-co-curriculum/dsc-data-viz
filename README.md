@@ -14,7 +14,7 @@ You will be able to:
 
 The Matplotlib plotting library provides a range of built in functions to start visualizing data with minimal effort. 
 
-First, import matplotlib's `pyplot` module (a module is a unit of prewritten code that you can use in your projects) into your working environment along with `numpy` (one of the most popular Python libraries for scientific computing) to create some sample data. You will see that importing the `pyplot` module from Matplotlib provides simple and agile creation of plots. 
+First, import `matplotlib`'s `pyplot` module (a module is a unit of prewritten code that you can use in your projects) into your working environment along with `numpy` (one of the most popular Python libraries for scientific computing) to create some sample data. You will see that importing the `pyplot` module from Matplotlib provides simple and agile creation of plots. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -38,7 +38,7 @@ A scatter plot is a two-dimensional data visualization that uses individual data
 
 Scatter plots are used when you want to show the relationship between two variables. Scatter plots are sometimes called correlation plots because they show how two variables are correlated. 
 
-For this example, you will use python's `numpy` library to create sample data. The industry standard is to alias numpy as np. Since numpy is a specialized library for scientific computing, it is primarily used for performing numerical operations. Don't worry about all of the details surrounding numpy right now, it will be introduced formally later. For now, use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
+For this example, you will use Python's `numpy` library to create sample data. The industry standard is to alias `numpy` as `np`. Since `numpy` is a specialized library for scientific computing, it is primarily used for performing numerical operations. Don't worry about all of the details surrounding `numpy` right now, it will be introduced formally later. For now, use [numpy's `linspace()` function](https://docs.scipy.org/doc/numpy-1.14.5/reference/generated/numpy.linspace.html) to quickly generate some dummy data for visualizations.
 
 
 ```python
@@ -51,7 +51,7 @@ x = np.linspace(0, 10, 30)
 y = np.sin(x)
 ```
 
-Now that you have your data ready, create a scatter plot using the `plt.scatter()` function which takes in two vectors and shows their relationship. You can optionally pass in extra parameters like `label` to provide information about what you are plotting, `plt.title()` for defining a title, and `plt.legend()` to add the label information to the plot in a legend. Finally, use the `plt.show()` function to display the plot.
+Now that you have your data ready, create a scatter plot using the `plt.scatter()` function which takes in two lists and shows their relationship. You can optionally pass in extra parameters like `label` to provide information about what you are plotting, `plt.title()` for defining a title, and `plt.legend()` to add the label information to the plot in a legend. Finally, use the `plt.show()` function to display the plot.
 
 
 ```python
@@ -66,7 +66,7 @@ plt.show()
 ![png](index_files/index_5_0.png)
 
 
-In case you are wondering, the above plot shows a sine wave where the y-variable has a periodic dependence on the x-variable. You can customize the plot further to make it easier to read. First, provide some labels for both axes by using `plt.xlabel` and `plt.ylabel`. You can also change the size of the plot with `plt.figure(figsize=(a,b))`, where a and b specify the width and height of the plot in inches.
+In case you are wondering, the above plot shows a sine wave where the y-variable has a periodic dependence on the x-variable. You can customize the plot further to make it easier to read. First, provide some labels for both axes by using `plt.xlabel()` and `plt.ylabel()`. You can also change the size of the plot with `plt.figure(figsize=(a,b))`, where a and b specify the width and height of the plot in inches.
 
 
 ```python
@@ -97,9 +97,9 @@ Bar graphs (also called "bar charts") are one of the most common plot types for 
 <img src="images/image_bar.png" width="700">
 
 
-Matplotlib features a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` methods can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. 
+Matplotlib features a number of handy plotting functions. Matplotlib's `.bar()` and `.barh()` functions can be used to draw constant width vertical and constant height horizontal bar graphs for a simple sequence of x, y values. 
 
-Now that you understand the concepts, try to generate some plots. To do this, first generate some data using functions from the ```np.random``` library. This is a specialized library for generating random numbers. Don't worry if the code seems unfamiliar now, the details of using numpy for generating random numbers will be covered in detail later.
+Now that you understand the concepts, try to generate some plots. To do this, first generate some data using functions from the `np.random` module. This is a specialized module for generating random numbers. Don't worry if the code seems unfamiliar now, the details of using `numpy` for generating random numbers will be covered in detail later.
 
 
 ```python
