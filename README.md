@@ -283,7 +283,7 @@ ax.set_ylabel("Frequency of Values");
 ![png](index_files/index_22_0.png)
 
 
-Recall, the y-axis tells you how often a certain range of numbers appears in the data set. From the histogram (interpreting these dummy numbers as though they were real), you can see that there are a lot of people who retire around 65. There are significantly fewer people who retire at 75 and even fewer people who retire at 50.
+Recall, the y-axis tells you how often a certain range of numbers appears in the data set. From the histogram (interpreting these dummy numbers as though they were real), you can see that there are a lot of people who retire around 65. There are a quarter as many people who retire at 75 compared to 65 (10 vs. 40 people) and even fewer who retire at 50 (2 people).
 
 ### Customizing Histograms: The `bins` Argument
 
