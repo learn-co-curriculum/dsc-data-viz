@@ -1,4 +1,3 @@
-
 # Data Visualization
 
 ## Introduction
@@ -6,7 +5,9 @@
 This lesson introduces data visualization using Python and the popular Matplotlib plotting library. You will explore the fundamental features of standard Matplotlib plots and how to use them for creating and customizing visualizations. 
 
 ## Objectives
+
 You will be able to:
+
 * Use Matplotlib to create a scatter plot
 * Use Matplotlib to create a histogram
 * Interpret a histogram to gain insight about a distribution of data
@@ -64,7 +65,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_5_0.png)
+    
 
 
 In case you are wondering, the above plot shows a sine wave where the y-variable has a periodic dependence on the x-variable. You can customize the plot further to make it easier to read. First, provide some labels for both axes by using `plt.xlabel()` and `plt.ylabel()`. You can also change the size of the plot with `plt.figure(figsize=(a,b))`, where a and b specify the width and height of the plot in inches.
@@ -86,7 +89,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_7_0.png)
+    
 
 
 The nice thing is labels and other customizations that you see here are applicable to almost all kinds of plots in Matplotlib. 
@@ -134,7 +139,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_11_0.png)
+    
 
 
 That bar graph above is useful because you can easily inspect the quantities in each category (0-10) and make informed decisions about how data are distributed across these categories. 
@@ -175,7 +182,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_14_0.png)
+    
 
 
 Recall, the y-axis tells you how often a certain range of numbers appears in the data set. From the histogram, you can see that there are a lot of people who retire around 65. There are significantly fewer people who retire at 75 and even fewer people who retire at 50. 
@@ -193,7 +202,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_16_0.png)
+    
 
 
 Note the scale of the y-axis and the width of the bars compared to the histogram using 10 bins. The granularity of the bins can be changed according to your specific analytical needs and the amount of data available. For example, if you had 50 data points, you would not want to use 500 bins.  
@@ -218,7 +229,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_18_0.png)
+    
 
 
 Notice that the shape of the distribution begins to look more bell-shaped as the size of the data set increases. This is characteristic of an important distribution known as the "Normal" distribution which you will learn more about later.
